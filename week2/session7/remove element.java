@@ -1,0 +1,36 @@
+import java.util.*;
+
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int k = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != val) {
+                nums[k] = nums[i];
+                k++;
+            }
+        }
+
+        return k;
+    }
+
+    public static void main(String[] args) {
+        Solution obj = new Solution();
+
+        int[] nums = {3, 2, 2, 3};
+        int val = 3;
+
+        int k = obj.removeElement(nums, val);
+
+        System.out.println("k = " + k);
+        System.out.println("nums = " + Arrays.toString(nums));
+    }
+}
+
+Input
+nums =
+[3,2,2,3]
+val =
+3
+Output
+[2,2]
